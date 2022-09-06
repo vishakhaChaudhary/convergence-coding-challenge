@@ -30,10 +30,9 @@ Your app is ready to be deployed!
 ### Code Splitting
 
 The project consist of three modules:
-
-1. User
-2. Dashboard
-3. Home
+  - _User_
+  - _Dashboard_
+  - _Home_
 
 1. User: This module is divided into two modules `Register` and `Login`. The `react-bootstrap` is used to create the page and form. Also, to validate the fields `yup` package is used.
 
@@ -46,30 +45,31 @@ The project consist of three modules:
 Screen 1: _New User or Existing User_
     - If a new User, redirect to the registration screen.
     - The existing User needs to go to the login screen.
-# Navigate to this screen if no User is in session.
 
-Screen 2: _Registration screen_
-# Email field with validation
+Navigate to this screen if no User is in session: Screen 2: _Registration screen_
+1. Email field with validation
 a. Email validity check
 b. required check
-# Password with validation
+
+2. Password with validation
 a. min of 6 char. max 12
 b. contain min 2 alphabets.
 c. It should not have special characters.
 
 _Note_: 
-# recheck password field should match the password
-# gender choice field male or female
-# all fields are required, show validation error on submit
-# show success and navigate to the login screen
-# store password in Local storage for later verification
+ - recheck password field should match the password
+ - gender choice field male or female
+ - all fields are required, show validation error on submit
+ - show success and navigate to the login screen
+ - store password in Local storage for later verification
 
 Screen 3: _Login screen_
-# User to enter email and password, with all basic validation
-# Mock network like delay, and validate the email and password
-# During the wait, disable the login button and show the loader inside
-the button.
+1. User to enter email and password, with all basic validation
+2. Mock network like delay, and validate the email and password
+3. During the wait, disable the login button and show the loader inside the button.
 
-# On success, navigate to Screen 4
-# On failure, clear the fields and offer an error message to retry
 Screen 4: _Dashboard screen_
+
+    - On success, navigate to this screen. 
+    - On failure, clear the fields and offer an error message to retry
+
