@@ -1,66 +1,75 @@
-# Getting Started with Create React App
+# Convergence Coding Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project have the following screens for users to register and log in to an app.
 
-## Available Scripts
+### Steps to run the project
 
-In the project directory on your local, you can run:
+To run the project on local, install node and npm. Then follow the follwoing command
 
-### `npm run local`
+1. Clone the project from `git clone https://github.com/vishakhaChaudhary/convergence-coding-challenge`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Once clone is successfully, then install all the dependencies using the below command
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`npm install`
+
+3. All the packages will be installed then run the command in the project directory on your local
+
+`npm run local`
+
+This will run the app on [http://localhost:3000]. Open, (http://localhost:3000) to view it in your browser.
+
+4. Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
 ### `npm run build`
 ### `npm run start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
 ### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The project consist of three modules:
 
-### Analyzing the Bundle Size
+1. User
+2. Dashboard
+3. Home
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. User: This module is divided into two modules `Register` and `Login`. The `react-bootstrap` is used to create the page and form. Also, to validate the fields `yup` package is used.
 
-### Making a Progressive Web App
+2. Dasboard: This module listed the logged in user details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Home: This is the default page, it is loaded when there is no user is registered or logged in. It consist of two button Sign-Up and Sign-In. Bu clicking on it user can easily redirect to the following page.
 
-### Advanced Configuration
+### Project Task
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Screen 1: _New User or Existing User_
+    - If a new User, redirect to the registration screen.
+    - The existing User needs to go to the login screen.
+# Navigate to this screen if no User is in session.
 
-### Deployment
+Screen 2: _Registration screen_
+# Email field with validation
+a. Email validity check
+b. required check
+# Password with validation
+a. min of 6 char. max 12
+b. contain min 2 alphabets.
+c. It should not have special characters.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+_Note_: 
+# recheck password field should match the password
+# gender choice field male or female
+# all fields are required, show validation error on submit
+# show success and navigate to the login screen
+# store password in Local storage for later verification
 
-### `npm run build` fails to minify
+Screen 3: _Login screen_
+# User to enter email and password, with all basic validation
+# Mock network like delay, and validate the email and password
+# During the wait, disable the login button and show the loader inside
+the button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# On success, navigate to Screen 4
+# On failure, clear the fields and offer an error message to retry
+Screen 4: _Dashboard screen_
